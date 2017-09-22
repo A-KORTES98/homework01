@@ -32,7 +32,7 @@ public class Notepad {
     /**
      * Constructs a ArrayList containing the specified string
      *
-     * @param note string that append in ArrayList
+     * @param note string that appends in ArrayList
      */
     Notepad(String note){
         this();
@@ -42,7 +42,7 @@ public class Notepad {
     /**
      * Appends the specified string in ArrayList
      *
-     * @param note string that append in ArrayList
+     * @param note string that appends in ArrayList
      */
     public void addNote(String note){
         notes.add(note);
