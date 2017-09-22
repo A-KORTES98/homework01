@@ -1,9 +1,12 @@
+package task06;
+
 import java.util.ArrayList;
 
 /**
  * Created by anton on 22.09.17.
  */
 public class Notepad {
+
     private ArrayList<String> notes;
     Notepad(){
         notes = new ArrayList<String>();
