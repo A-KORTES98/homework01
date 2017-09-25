@@ -10,18 +10,17 @@ import java.util.Scanner;
 public class MaxSumPair {
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter count of array's elements: ");
-        int countOfEl = new Scanner(System.in).nextInt();
-        Random rand = new Random();
+        int countOfEl = sc.nextInt();
+        System.out.println("Enter array's elements: ");
         int[] arr = new int[countOfEl];
-        int maxPairSum;
 
         for (int i = 0; i < countOfEl; i++) {
-            arr[i] = rand.nextInt(1000);
+            arr[i] = sc.nextInt();
         }
-        System.out.println("Initial array: " + Arrays.toString(arr));
 
+        int maxPairSum;
         maxPairSum = arr[0] + arr[countOfEl - 1];
         for (int i = 1; i < (countOfEl + 1) / 2; i++) {
             int pairSum = arr[i] + arr[countOfEl - i - 1];
