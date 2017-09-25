@@ -8,7 +8,20 @@ import java.util.Scanner;
 public class Sequence {
     public static void main(String[] args) {
         int i = 0;
-        double eps = new Scanner(System.in).nextDouble();
+        Scanner sc = new Scanner(System.in);
+        double eps = 0;
+        System.out.print("Enter eps(positive num): ");
+
+        do{
+            try{
+                eps = Double.parseDouble(sc.nextLine());
+                if (eps <= 0) throw new NumberFormatException();
+            }
+            catch(NumberFormatException e){
+                System.out.print("Error!!!\nEnter positive num: ");
+            }
+        }while (eps <= 0);
+
         while (calculateNextEl(++i) > eps){}
         System.out.println("Index of maximal element that less then \"" + eps + "\" : " + i);
     }

@@ -71,7 +71,7 @@ public class Notepad {
      * @param index of substituting note
      * @param note new note
      */
-    public void editNote(int index, String note){
+    public void setNote(int index, String note){
         notes.set(index, note);
     }
 
